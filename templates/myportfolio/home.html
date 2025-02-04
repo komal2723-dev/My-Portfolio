@@ -1,0 +1,289 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .css-icon {
+      cursor: pointer !important;
+    }
+
+    #icon:hover {
+      color: rgb(168, 154, 154) !important;
+    }
+
+    .css-heading {
+      font-size: 2.2rem;
+      font-weight: bolder;
+      font-family: serif;
+      border: 1px solid white;
+      border-radius: 4px;
+      box-shadow: 0 0 3rem purple;
+      margin-top: 6rem;
+      margin-left: 7rem;
+      background: linear-gradient(45deg, hsla(293, 57%, 34%, 0.692) 20%, hsla(263, 61%, 19%, 0.637) 100%);
+    }
+
+    span .style-blink::after {
+      content: "|";
+      animation: blink 1s infinite;
+
+    }
+
+    @keyframes blink {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    .text-color {
+      -webkit-text-stroke: 1px rgb(232, 129, 18);
+      -webkit-text-fill-color: rgb(245, 218, 14);
+      text-shadow: 2px 1px 4px rgb(232, 129, 18);
+      /* Optional: Fill text with color */
+    }
+
+    .my-intro {
+      font-size: 3rem;
+      font-family: serif;
+      font-weight: bolder;
+      margin-left: 7rem;
+      line-height: 1.3em;
+    }
+
+    .my-info {
+      font-size: 1.1rem;
+      font-family: sans-serif;
+      color: #cfc6c6c8;
+      border-left: 1px solid #cfc6c6c8;
+      margin-left: 7rem;
+      padding: 0px 22px;
+      margin-top: -1rem;
+      padding-right: 113px;
+    }
+
+    .icon-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      margin-right: 1.7rem;
+    }
+
+    .social-links {
+      color: cyan;
+      font-size: 1.9rem;
+      margin: 0.4rem;
+
+    }
+
+    .social-links:hover {
+      font-size: 2rem;
+      text-shadow: 0 0 2rem cyan;
+    }
+
+    .design .circle {
+      aspect-ratio: 1;
+      position: absolute;
+      border-radius: 50%;
+      top: 70%;
+      left: 68%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .circle:nth-child(1) {
+      background: linear-gradient(90deg, transparent 50%, );
+      width: 38rem;
+
+    }
+
+    .circle:nth-child(2) {
+      background-image: url('');
+      background-size: 100%;
+      border: .6rem solid white;
+      width: 25rem;
+      box-shadow: 0 0 1rem white, inset 0 0 1rem white, 0 0 2rem cyan, inset 0 0 2rem cyan, 0 0 3rem blue, inset 0 0 3rem blue;
+    }
+
+    .about-section {
+      background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.295));
+      margin-top: 1rem;
+      height: auto;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0);
+    }
+
+    .about-heading {
+      transition: all ease-in-out 0.3s;
+      color: white;
+      font-size: 6.5rem;
+      font-family: serif;
+      font-weight: bolder;
+      margin-top: 9rem;
+      margin-bottom: 4rem;
+      line-height: 5rem;
+      margin-left: 7rem;
+    }
+
+    .about-heading:hover {
+      font-size: 7rem;
+      transform: scale(1.2);
+    }
+
+    .arrow {
+      color: #d749fa;
+      margin-left: 1rem;
+      transition: all ease-in-out 0.3s;
+
+    }
+
+    .about-content {
+      font-size: 1.4rem;
+      font-family: sans-serif;
+      color: #cfc6c6c8;
+      border-left: 1px solid #cfc6c6c8;
+      margin-left: 7rem;
+      padding-left: 25px;
+      margin-top: 6rem;
+      text-align: justify;
+      padding-right: 23px;
+      margin-bottom: 6rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- -------------------header-------------------- -->
+  <header>
+    <nav class="navbar navbar-expand-lg mt-3" id="mynav">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">KomalStack</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2 py-1">
+              <a class="nav-link active text-light" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item px-2 py-1">
+              <a class="nav-link active text-light" aria-current="page" href="#about-me">About me</a>
+            </li>
+            <li class="nav-item px-2 py-1">
+              <a class="nav-link active text-light" aria-current="page" href="#">My Skills</a>
+            </li>
+            <li class="nav-item px-2 py-1">
+              <a class="nav-link active text-light" aria-current="page" href="#">Projects</a>
+            </li>
+            <li class="nav-item px-2 py-1">
+              <a class="nav-link active text-light" aria-current="page" href="#">Resume</a>
+            </li>
+          </ul>
+          <span class="css-icon px-5"><i class="bi bi-brightness-high-fill text-white " id="icon"></i></span>
+          <a class="nav-link active" aria-current="page" href="#"><button class="btn css-btn" type="submit">Contact
+              me</button></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- -----------------main----------------------  -->
+  <main>
+    <!-- ------------home------- -->
+    <section id="home">
+      <div class="row">
+        <div class="col-5">
+          <h1 class="text-white css-heading px-4 py-3"><span id="typewritter-wrapper" class="style-blink"></span></h1>
+          <p class="text-light py-4 my-intro">Hi! I'm <span class="text-color">Komal</span> <br>A Full-Stack Web
+            Developer</p>
+          <div class="row">
+            <div class="col">
+              <p class="my-info ">I'm a passionate python full-stack developer. My goal is to write maintainble, clean
+                and understandable code to process development wa enjoyable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-5 design">
+          <div class="circle"></div>
+          <div class="circle"></div>
+
+        </div>
+        <div class="col icon-item">
+          <a href="https://www.instagram.com/vawzen_storm_.7/" target="_blank" class="social-links"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/komal-goyal-6615a42b2/" target="_blank" class="social-links"><i
+              class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/komal2723-dev" target="_blank" class="social-links"><i
+              class="bi bi-github"></i></a>
+          <a href="https://www.facebook.com/komolika.aggarwal" target="_blank" class="social-links"><i
+              class="bi bi-facebook"></i></a>
+          <a href="tel:+91 9034506856" target="_blank" class="social-links"><i class="bi bi-telephone-fill"></i></a>
+          <a href="mailto:komalg2723@gmail.com" target="_blank" class="social-links"><i class="bi bi-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------About me----------- -->
+    <section class="about-section" id="about-me">
+      <div class="row">
+        <div class="col-4">
+          <div class="about-heading">About me <span class="arrow"><i class="bi bi-arrow-right fw-bolder"></i></span>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="about-content">
+            Hello! I’m <span class="text-color fs-4">Komal</span>, a passionate Python Full-Stack Web Developer from
+            India. With a keen eye
+            for detail and a passion for creating visually appealing websites, I specialize in both Back-End & Front-End
+            with a strong foundation in HTML, CSS, JavaScript, Django, Bootstrap, etc. As a recent graduate, I have been
+            actively building projects that focus on responsive design, user experience, and modern web technologies. I
+            am eager to apply my skills and creativity to real-world projects, helping businesses establish a strong
+            digital presence.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------My Skills--------------------- -->
+     <section id="my-skills" class="skill-section">
+
+     </section>
+
+  </main>
+
+
+  <!-- ------------------------footer------------------------------------ -->
+
+
+
+
+  <!-- -------------js------------ -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed("#typewritter-wrapper", {
+      strings: ["Welcome to my Portfolio"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      BackDelay: 1000,
+      loop: true
+    })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
