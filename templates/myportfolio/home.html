@@ -10,7 +10,137 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+
   <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #0a0a0a, #090a0a, #0b0a0b, #0b0a0c, #0c0817, #1b082e, #1c0836, #210a51, #12098d, #120991);
+      height: 10rem;
+      max-width: 100vw;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* -----------------animations keyframes-------------- */
+
+    @keyframes slideTop {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideLeft {
+      from {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0px);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideBottom {
+      from {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
+    @keyframes blink {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    /* --------------------navbar------------------- */
+    #mynav {
+      border: 1px solid rgba(38, 7, 87, 0.671);
+      border-radius: 50px;
+      background-color: #00000077;
+      opacity: 0.8;
+      margin-left: 5rem;
+      margin-right: 4.3rem;
+      padding-left: 1.2rem;
+    }
+
+    .nav-logo-animated {
+      color: cyan;
+      text-shadow: 0 0 1rem cyan;
+      font-size: 1.7rem;
+      animation: slideRight 0.4s 0.5s linear forwards;
+    }
+
+    nav .css-btn {
+      background-color: #250936;
+      border: none;
+      border-radius: 50px;
+      color: white;
+      /* width: fit-content;
+    padding: 1rem; */
+    }
+
+    nav ul li .nav-link {
+      animation: slideTop 0.4s 0.5s linear forwards;
+    }
+
+    nav ul li .nav-link:hover {
+      color: cyan !important;
+      font-size: 1.2rem !important;
+      text-shadow: 0 0 1rem rgb(244, 247, 247), 0 0 2rem cyan;
+      text-decoration: underline !important;
+      text-decoration-thickness: 17px;
+      text-underline-offset: 5px;
+      text-decoration-color: cyan;
+    }
+
+    .css-btn:hover {
+      background-color: #371050 !important;
+      border: none;
+      border-radius: 50px;
+      color: rgb(235, 235, 215);
+    }
+
     .css-icon {
       cursor: pointer !important;
     }
@@ -19,6 +149,7 @@
       color: rgb(168, 154, 154) !important;
     }
 
+    /* -----------------------home----------------------- */
     .css-heading {
       font-size: 2.2rem;
       font-weight: bolder;
@@ -34,17 +165,6 @@
     span .style-blink::after {
       content: "|";
       animation: blink 1s infinite;
-
-    }
-
-    @keyframes blink {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-      }
     }
 
     .text-color {
@@ -60,6 +180,7 @@
       font-weight: bolder;
       margin-left: 7rem;
       line-height: 1.3em;
+      animation: slideRight 0.4s 0.5s linear forwards;
     }
 
     .my-info {
@@ -71,21 +192,23 @@
       padding: 0px 22px;
       margin-top: -1rem;
       padding-right: 113px;
+      animation: slideBottom 0.4s 0.5s linear forwards;
     }
 
+    /* -----------------------social links--------------------- */
     .icon-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: end;
       margin-right: 1.7rem;
+      animation: slideLeft 0.4s 0.5s linear forwards;
     }
 
     .social-links {
       color: cyan;
       font-size: 1.9rem;
       margin: 0.4rem;
-
     }
 
     .social-links:hover {
@@ -93,6 +216,7 @@
       text-shadow: 0 0 2rem cyan;
     }
 
+    /* ---------------------pics---------------------- */
     .design .circle {
       aspect-ratio: 1;
       position: absolute;
@@ -100,13 +224,11 @@
       top: 70%;
       left: 68%;
       transform: translate(-50%, -50%);
-
     }
 
     .circle:nth-child(1) {
       background: linear-gradient(90deg, transparent 50%, );
       width: 38rem;
-
     }
 
     .circle:nth-child(2) {
@@ -117,6 +239,7 @@
       box-shadow: 0 0 1rem white, inset 0 0 1rem white, 0 0 2rem cyan, inset 0 0 2rem cyan, 0 0 3rem blue, inset 0 0 3rem blue;
     }
 
+    /* -----------------------about me----------------- */
     .about-section {
       background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.295));
       margin-top: 1rem;
@@ -159,6 +282,116 @@
       text-align: justify;
       padding-right: 23px;
       margin-bottom: 6rem;
+      animation: slideLeft 0.5s 0.5s linear forwards;
+    }
+
+    /* ----------------------css for skills section--------------- */
+    .skills {
+      background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.295));
+      height: auto;
+    }
+
+    .skill-main-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: .2rem;
+    }
+
+    .skill-main-text span {
+      color: rgba(220, 220, 220, 0.514);
+      font-size: 1.4rem;
+      font-family: serif;
+      animation: slideTop .5s ease forwards;
+    }
+
+    .skill-main-text h2 {
+      color: white;
+      font-size: 5rem;
+      font-family: serif;
+      font-weight: bolder;
+      animation: slideTop .5s ease forwards;
+    }
+
+    .skill-main-text h2 span {
+      color: rgb(7, 248, 248);
+      font-size: 5rem;
+      font-family: serif;
+      font-weight: bolder;
+      animation: slideTop .5s ease forwards;
+    }
+
+    .heading1 {
+      margin-top: .5rem;
+      color: #fff;
+      text-align: center;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      text-decoration-thickness: 5px;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      animation: slideTop .3s linear forwards;
+    }
+
+    .Technical-bars {
+      margin: 0 2.7rem 2rem 7rem;
+      border: 1px solid cyan;
+      border-radius: 12px;
+      box-shadow: 0 0 1rem cyan, inset 0 0 1rem cyan;
+      outline: 1px solid cyan;
+      outline-offset: 2px;
+      padding: 12px 23px
+    }
+
+    .Technical-bars .bar {
+      margin-bottom: 1rem;
+    }
+
+    .progress-container {
+      width: 100%;
+      height: 9px;
+      background: #0c0101be;
+      border-radius: 5px;
+      outline: 1px solid cyan;
+      box-shadow: 0 0 1rem cyan;
+      outline-offset: 1px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      border-radius: 5px;
+      width: 0;
+      box-shadow: inset 0 0 1rem white, inset 0 0 2rem cyan;
+      transition: width 1.5s ease-in-out;
+      transition-delay: 1s;
+    }
+
+    .progress-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: #f1dede;
+      margin-bottom: 5px;
+    }
+
+    .professional-bars {
+      margin: 0 4.5rem 2rem 4rem;
+      background: linear-gradient(to right, );
+      border: 1px solid cyan;
+      border-radius: 12px;
+      outline: 1px solid cyan;
+      /* box-shadow: 0 0 1rem cyan, inset 0 0 1rem cyan; */
+      outline-offset: 2px;
+      padding: 12px 23px
+    }
+
+    .professional-bars .bar {
+      margin-bottom: 2rem;
+    }
+
+    .bar .progress-bar small {
+      font-size: x-small;
+      font-weight: 400;
     }
   </style>
 </head>
@@ -168,7 +401,7 @@
   <header>
     <nav class="navbar navbar-expand-lg mt-3" id="mynav">
       <div class="container-fluid">
-        <a class="navbar-brand text-light" href="#">KomalStack</a>
+        <a class="navbar-brand nav-logo-animated" href="#">KomalStack</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -176,13 +409,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item px-2 py-1">
-              <a class="nav-link active text-light" aria-current="page" href="#home">Home</a>
+              <a class="nav-link active text-light " aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item px-2 py-1">
               <a class="nav-link active text-light" aria-current="page" href="#about-me">About me</a>
             </li>
             <li class="nav-item px-2 py-1">
-              <a class="nav-link active text-light" aria-current="page" href="#">My Skills</a>
+              <a class="nav-link active text-light" aria-current="page" href="#my-skills">My Skills</a>
             </li>
             <li class="nav-item px-2 py-1">
               <a class="nav-link active text-light" aria-current="page" href="#">Projects</a>
@@ -192,7 +425,7 @@
             </li>
           </ul>
           <span class="css-icon px-5"><i class="bi bi-brightness-high-fill text-white " id="icon"></i></span>
-          <a class="nav-link active" aria-current="page" href="#"><button class="btn css-btn" type="submit">Contact
+          <a class="nav-link" aria-current="page" href="#"><button class="btn css-btn" type="submit">Contact
               me</button></a>
         </div>
       </div>
@@ -257,10 +490,121 @@
     </section>
 
     <!-- --------------------My Skills--------------------- -->
-     <section id="my-skills" class="skill-section">
+    <section class="skills pb-5" id="my-skills">
+      <div class="skill-main-text">
+        <span>Technical and Professional</span>
+        <h2>My <span>Skills</span> </h2>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="skill-left">
+            <h3 class="heading1">Technical Skills</h3>
+            <div class="Technical-bars">
 
-     </section>
+              <div class="bar"><i class='bx bxl-html5' style="color: #c95d2e;"></i>
+                <div class="progress-text">HTML</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 80%;"><small>80%</small></div>
+                </div>
+              </div>
 
+              <div class="bar"><i class='bx bxl-css3' style="color: #147bbc;"></i>
+                <div class="progress-text">CSS</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 75%;"><small>75%</small></div>
+                </div>
+              </div>
+
+              <div class="bar"><i class='bx bxl-javascript' style="color: #b0bc1e;"></i>
+                <div class="progress-text">JavaScript</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 60%;"><small>60%</small></div>
+                </div>
+              </div>
+
+              <div class="bar"><i class="fa-brands fa-bootstrap" style="color: #0d6efd;"></i>
+                <div class="progress-text">Bootstrap</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 85%;"><small>85%</small></div>
+                </div>
+              </div>
+
+              <div class="bar"><i class="fa-solid fa-database" style="color: #036;"></i>
+                <div class="progress-text">MySQL</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 75%;"><small>75%</small></div>
+                </div>
+              </div>
+
+              <div class="bar"><i class='bx bxl-python' style="color: #c32ec9;"></i>
+                <div class="progress-text">Python</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 70%;"><small>70%</small></div>
+                </div>
+              </div>
+
+              <div class="bar"><i class='bx bxl-django' style="color: #092e20;"></i>
+                <div class="progress-text">Django</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 73%;"><small>73%</small></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="skill-right">
+            <h3 class="heading1">Professional Skills</h3>
+            <div class="professional-bars py-4">
+
+              <div class="bar">
+                <div class="progress-text mb-2 fs-5">Creativity</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 85%;"><small>85%</small></div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <div class="progress-text mb-2 fs-5">Communication</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 75%;"><small>75%</small></div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <div class="progress-text mb-2 fs-5">Problem Solving</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 80%;"><small>80%</small></div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <div class="progress-text mb-2 fs-5">Team Work</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 89%;"><small>89%</small></div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <div class="progress-text mb-2 fs-5">Leadership</div>
+                <div class="progress-container">
+                  <div class="progress-bar" style="width: 85%;"><small>85%</small></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------Projects--------------------- -->
+    <section class="projects" id="my-projects">
+      <div class="projects-main-text">
+        <h2 class="heading1">My Projects</h2>
+      </div>
+    </section>
   </main>
 
 
@@ -278,7 +622,18 @@
       backSpeed: 100,
       BackDelay: 1000,
       loop: true
-    })
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const progressBars = document.querySelectorAll('.progress-bar');
+      progressBars.forEach(bar => {
+        const targetWidth = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => {
+          bar.style.width = targetWidth;
+        }, 100);
+      });
+    });
+
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
