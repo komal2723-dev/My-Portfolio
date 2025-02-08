@@ -372,14 +372,17 @@
       box-shadow: inset 0 0 1rem white, inset 0 0 2rem cyan;
       animation: slideProgress 1.5s 1s ease forwards;
     }
-    @keyframes slideProgress{
-      from{
+
+    @keyframes slideProgress {
+      from {
         width: 0%;
       }
+
       to {
         width: var(--progress-width);
       }
     }
+
     .progress-text {
       font-family: 'Poppins', sans-serif;
       font-size: 16px;
@@ -406,7 +409,8 @@
       font-size: x-small;
       font-weight: 400;
     }
-/* ------------------projects------------------------- */
+
+    /* ------------------projects------------------------- */
     .projects {
       background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.295));
       height: auto;
@@ -441,12 +445,12 @@
       animation: slideRight .5s ease forwards;
     }
 
-  .swiper {
+    .swiper {
       width: 90%;
       padding-top: 50px;
       padding-bottom: 50px;
       /* padding-left: -50px; */
-      
+
     }
 
     .swiper-slide {
@@ -467,6 +471,7 @@
       display: block;
       transition: transform 0.5s;
     }
+
     .overlay {
       height: 0;
       width: 100%;
@@ -500,7 +505,7 @@
       color: #110f0f;
       text-decoration: none;
       font-size: 1.5rem;
-      border:2px solid rgb(3, 7, 7);
+      border: 2px solid rgb(3, 7, 7);
       box-shadow: 0 0 1rem rgb(3, 7, 7);
       border-radius: 50%;
       text-align: center;
@@ -516,9 +521,195 @@
       height: 100%;
     }
 
+    /* -----------------------contact------------------- */
+    .contact {
+      background: rgba(0, 0, 0, 0.568);
+      height: auto;
+      padding-top: 1rem;
+      padding-bottom: 5rem;
+      backdrop-filter: blur(50px);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0), inset 0 0 1rem rgba(0, 0, 0, 0);
+    }
 
+    .contact-main-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: .2rem;
 
+      padding-bottom: 2rem;
+    }
 
+    .contact-main-text span {
+      color: rgba(220, 220, 220, 0.514);
+      margin: 0 16rem;
+      text-align: center;
+      font-size: 1.4rem;
+      font-family: serif;
+      text-transform: uppercase;
+      animation: slideBottom .5s ease forwards;
+    }
+
+    .contact .contact-main-text h2 {
+      color: white;
+      text-shadow: 0 0 1rem cyan;
+      font-size: 4rem;
+      font-family: serif;
+      font-weight: bolder;
+      letter-spacing: 3px;
+      animation: slideRight .5s ease forwards;
+    }
+
+    .contact .form-wrapper {
+      border: 1px solid transparent;
+      border-radius: 2rem;
+      background: rgba(0, 0, 0, 0.137);
+
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.671);
+      margin: 0 23rem;
+      padding: 2rem 4rem;
+    }
+
+    .css-form label {
+      color: white;
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+      font-family: serif;
+      margin-left: 1rem;
+    }
+
+    .css-form input,
+    .css-form textarea {
+      height: 3rem;
+      border-radius: 2.2rem;
+      background-color: rgba(48, 8, 48, 0.904) !important;
+      border: none;
+      box-shadow: 0 0 1rem black;
+      color: rgba(245, 245, 245, 0.829) !important;
+      font-size: 1.3rem;
+    }
+
+    .css-form input:focus-visible {
+      border-color: none !important;
+      background-color: rgba(48, 8, 48, 0.904) !important;
+    }
+
+    .css-form ::placeholder {
+      color: grey;
+      font-family: serif;
+      padding-left: .5rem;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+    }
+
+    .css-form textarea {
+      height: 13rem !important;
+      border-radius: 1.7rem;
+    }
+
+    .css-form .btn {
+      padding: 15px 40px;
+      border: none;
+      outline: none;
+      color: #fff;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      margin-top: 1rem;
+      margin-left: 9rem;
+      border-radius: 12px;
+    }
+
+    .css-form .btn::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    .css-form .btn::before {
+      content: "";
+      background: linear-gradient(45deg, #FF0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #ff00c8, #f00);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 600%;
+      z-index: -1;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      filter: blur(8px);
+      animation: glowing 20s linear infinite;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+      opacity: 1;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    /* hover */
+    .css-form .btn:hover::before {
+      opacity: 1;
+    }
+
+    .css-form .btn:hover::after {
+      background: transparent;
+    }
+
+    .css-form .btn:hover {
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* .css-form .btn:active::after{
+      background-color: #333;
+    }
+    .css-form .btn:active{
+      color: #f7f7f7;
+      font-weight: bold;
+    } */
+    .footer {
+      background: rgba(0, 0, 0, 0.747);
+      height: auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      backdrop-filter: blur(50px);
+      /* border-top: 3px solid purple; */
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0), inset 0 0 1rem rgba(0, 0, 0, 0);
+    }
+
+    .footer span {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 3rem;
+      letter-spacing: 2px;
+      word-spacing: 2px;
+      font-size: large;
+      font-weight: bold;
+      font-family: sans-serif;
+      color: rgba(185, 183, 183, 0.815);
+    }
+
+    .footer a:hover {
+      text-shadow: 0 0 1rem cyan;
+      font-size: 1.3rem;
+    }
   </style>
 </head>
 
@@ -547,11 +738,10 @@
               <a class="nav-link active text-light" aria-current="page" href="#my-projects">Projects</a>
             </li>
             <li class="nav-item px-2 py-1">
-              <a class="nav-link active text-light" aria-current="page" href="#">Resume</a>
+              <a class="nav-link active text-light" aria-current="page" href="">Resume</a>
             </li>
           </ul>
-          <span class="css-icon px-5"><i class="bi bi-brightness-high-fill text-white " id="icon"></i></span>
-          <a class="nav-link" aria-current="page" href="#"><button class="btn css-btn" type="submit">Contact
+          <a class="nav-link" aria-current="page" href="#contact-me"><button class="btn css-btn" type="button">Contact
               me</button></a>
         </div>
       </div>
@@ -630,49 +820,56 @@
               <div class="bar"><i class='bx bxl-html5' style="color: #c95d2e;"></i>
                 <div class="progress-text">HTML</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 80%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>80%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 80%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>80%</small></div>
                 </div>
               </div>
 
               <div class="bar"><i class='bx bxl-css3' style="color: #147bbc;"></i>
                 <div class="progress-text">CSS</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 75%;"aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>75%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 75%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>75%</small></div>
                 </div>
               </div>
 
               <div class="bar"><i class='bx bxl-javascript' style="color: #b0bc1e;"></i>
                 <div class="progress-text">JavaScript</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 60%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>60%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 60%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>60%</small></div>
                 </div>
               </div>
 
               <div class="bar"><i class="fa-brands fa-bootstrap" style="color: #0d6efd;"></i>
                 <div class="progress-text">Bootstrap</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 85%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>85%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 85%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>85%</small></div>
                 </div>
               </div>
 
               <div class="bar"><i class="fa-solid fa-database" style="color: #036;"></i>
                 <div class="progress-text">MySQL</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>75%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 75%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>75%</small></div>
                 </div>
               </div>
 
               <div class="bar"><i class='bx bxl-python' style="color: #c32ec9;"></i>
                 <div class="progress-text">Python</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 70%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>70%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 70%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>70%</small></div>
                 </div>
               </div>
 
               <div class="bar"><i class='bx bxl-django' style="color: #092e20;"></i>
                 <div class="progress-text">Django</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 73%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>73%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 73%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>73%</small></div>
                 </div>
               </div>
 
@@ -687,35 +884,40 @@
               <div class="bar">
                 <div class="progress-text mb-2 fs-5">Creativity</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 85%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>85%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 85%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>85%</small></div>
                 </div>
               </div>
 
               <div class="bar">
                 <div class="progress-text mb-2 fs-5">Communication</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>75%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 75%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>75%</small></div>
                 </div>
               </div>
 
               <div class="bar">
                 <div class="progress-text mb-2 fs-5">Problem Solving</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 80%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>80%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 80%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>80%</small></div>
                 </div>
               </div>
 
               <div class="bar">
                 <div class="progress-text mb-2 fs-5">Team Work</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 89%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>89%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 89%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>89%</small></div>
                 </div>
               </div>
 
               <div class="bar">
                 <div class="progress-text mb-2 fs-5">Leadership</div>
                 <div class="progress-container">
-                  <div class="progress-bar" role="progressbar" style="--progress-width: 85%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><small>85%</small></div>
+                  <div class="progress-bar" role="progressbar" style="--progress-width: 85%;" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"><small>85%</small></div>
                 </div>
               </div>
 
@@ -780,22 +982,67 @@
               <p>..........................</p>
               <a href=""><i class='bx bx-link-external'></i></a>
             </div>
-          </div>     
+          </div>
         </div>
         <div class="swiper-pagination"></div>
       </div>
+    </section>
+
+    <!-- ------------------------contact form ------------------------- -->
+    <section class="contact" id="contact-me">
+      <div class="contact-main-text">
+        <span>👉 Let’s build something amazing together! Feel free to Contact Me to discuss amazing projects....</span>
+        <h2 class="text-center pt-1 pb-3">Contact Me</h2>
+      </div>
+
+      <div class="form-wrapper">
+        <form class="css-form" method="post">
+          {% csrf_token %}
+          {% if messages %}
+          {% for message in messages %}
+              <div class="alert alert-success alert-dismissible fade show w-100" role="alert">
+                  {{message}}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+          {% endfor %}  
+
+          {% endif %}
+          {% for fm in form %}
+          <div class="mb-3">
+            {{fm.label_tag}}
+            {{fm}}
+            {{fm.errors|striptags}}
+          </div>
+          {% endfor %}
+          <button type="submit" class="btn">Send Message</button>
+      </div>
+
+      </form>
+
     </section>
   </main>
 
 
   <!-- ------------------------footer------------------------------------ -->
-
+  <footer class="footer d-flex">
+    <div class="col ms-5 fs-5 ps-3">
+      <a href="https://www.instagram.com/vawzen_storm_.7/" target="_blank" class="pe-4 text-info"><i
+          class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/komal-goyal-6615a42b2/" target="_blank" class="pe-4 text-info"><i
+          class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/komal2723-dev" target="_blank" class="pe-4 text-info"><i class="bi bi-github"></i></a>
+      <a href="https://www.facebook.com/komolika.aggarwal" target="_blank" class="pe-4 text-info"><i
+          class="bi bi-facebook"></i></a>
+      <a href="tel:+91 9034506856" target="_blank" class="pe-4 text-info"><i class="bi bi-telephone-fill"></i></a>
+      <a href="mailto:komalg2723@gmail.com" target="_blank" class="pe-4 text-info"><i class="bi bi-envelope"></i></a>
+    </div>
+    <span>&copy;Copyright 2025 Komal. All Rights Reserved.</span>
+  </footer>
 
 
 
   <!-- -------------js------------ -->
   <!-- Swiper JS -->
-  <script src="{% static 'js/script.js' %}"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script>
@@ -812,24 +1059,24 @@
         modifier: 1,
         slideShadows: true,
       },
-      autoplay:{
-        
+      autoplay: {
+
         delay: 2500,
-        disableOnInteraction:false,
+        disableOnInteraction: false,
       }
     });
     var typed = new Typed("#typewritter-wrapper", {
-    strings: ["Welcome to my Portfolio"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    BackDelay: 1000,
-    loop: true
-  });
-  
+      strings: ["Welcome to my Portfolio"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      BackDelay: 1000,
+      loop: true
+    });
 
-    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 </body>
