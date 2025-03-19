@@ -1,0 +1,92 @@
+
+    /* -----------------------home----------------------- */
+    .css-heading {
+        font-size: 2.2rem;
+        font-weight: bolder;
+        font-family: serif;
+        border: 1px solid white;
+        border-radius: 4px;
+        box-shadow: 0 0 3rem purple;
+        margin-top: 6rem;
+        text-align: center;
+        width: 35%;
+        margin-left: 7rem;
+        background: linear-gradient(45deg, hsla(293, 57%, 34%, 0.692) 20%, hsla(263, 61%, 19%, 0.637) 100%);
+      }
+  
+      span .style-blink::after {
+        content: "|";
+        animation: blink 1s infinite;
+      }
+  
+      .text-color {
+        -webkit-text-stroke: 1px rgb(232, 129, 18);
+        -webkit-text-fill-color: rgb(245, 218, 14);
+        text-shadow: 2px 1px 4px rgb(232, 129, 18);
+        /* Optional: Fill text with color */
+      }
+  
+      .my-intro {
+        font-size: 3rem;
+        font-family: serif;
+        font-weight: bolder;
+        margin-left: 7rem;
+        line-height: 1.3em;
+        animation: slideRight 0.4s 0.5s linear forwards;
+      }
+  
+      .my-info {
+        font-size: 1.1rem;
+        font-family: sans-serif;
+        color: #cfc6c6c8;
+        border-left: 1px solid #cfc6c6c8;
+        margin-left: 7rem;
+        padding: 0px 22px;
+        margin-top: -1rem;
+        padding-right: 113px;
+        animation: slideBottom 0.4s 0.5s linear forwards;
+      }
+  
+      /* -----------------------social links--------------------- */
+      .icon-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: self-end;
+        padding-right: 1.7rem;
+        animation: slideLeft 0.4s 0.5s linear forwards;
+      }
+  
+      .social-links {
+        color: cyan;
+        font-size: 1.9rem;
+        margin: 0.4rem;
+      }
+  
+      .social-links:hover {
+        font-size: 2rem;
+        text-shadow: 0 0 2rem cyan;
+      }
+  
+      /* ---------------------pics---------------------- */
+      .design .circle {
+        aspect-ratio: 1;
+        border-radius: 50%;
+        margin-top: -8rem;
+        margin-left: 18rem;
+        transform: translate(-50%, -50%);
+      }
+  
+      .circle:nth-child(1) {
+        background: linear-gradient(90deg, transparent 50%, );
+        width: 38rem;
+      }
+  
+      .circle:nth-child(2) {
+        background-image: url('');
+        background-size: 100%;
+        border: .6rem solid white;
+        width: 25rem;
+        box-shadow: 0 0 1rem white, inset 0 0 1rem white, 0 0 2rem cyan, inset 0 0 2rem cyan, 0 0 3rem blue, inset 0 0 3rem blue;
+      }
+  

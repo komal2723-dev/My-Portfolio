@@ -1,0 +1,89 @@
+ /* --------------------navbar------------------- */
+ #mynav {
+    border: 1px solid rgba(38, 7, 87, 0.671);
+    border-radius: 50px;
+    background-color: #00000077;
+    opacity: 0.8;
+    margin-left: 5rem;
+    margin-right: 4.3rem;
+    padding-left: 1.2rem;
+  }
+
+  .nav-logo-animated {
+    color: cyan;
+    text-shadow: 0 0 1rem cyan;
+    font-size: 1.7rem;
+    animation: slideRight 0.4s 0.5s linear forwards;
+  }
+
+  nav .css-btn {
+    background-color: #07c9fafb;
+    border: none;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    /* width: fit-content;
+  padding: 1rem; */
+  }
+
+  nav ul li .nav-link {
+    animation: slideTop 0.4s 0.5s linear forwards;
+  }
+
+  nav ul li .nav-link:hover {
+    color: cyan !important;
+
+    font-size: 1.2rem !important;
+    text-shadow: 0 0 1rem rgb(244, 247, 247), 0 0 2rem cyan;
+    text-decoration: underline !important;
+    text-decoration-thickness: 17px;
+    text-underline-offset: 5px;
+    text-decoration-color: cyan;
+  }
+
+  .css-btn:hover {
+    background-color: cyan !important;
+    box-shadow: 0 0 1rem cyan;
+    border: none;
+    border-radius: 50px;
+    color: rgb(15, 15, 2);
+  }
+
+  .css-icon {
+    cursor: pointer !important;
+  }
+
+  #icon:hover {
+    color: rgb(168, 154, 154) !important;
+  }
+
+  /* responsiveness for navbar */
+  @media only screen and (max-width: 990px){
+    #mynav{
+    margin-left: 3rem;
+    margin-right: 3.3rem;
+  }
+}
+  
+.navbar-toggler{
+margin-right: 1rem;
+background: grey;
+padding: 3px;
+}
+@media only screen and (max-width: 430px){
+#mynav {
+      margin-left: 1rem;
+      margin-right: 1.3rem;
+  }
+  .nav-logo-animated{
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 292px){
+#mynav {
+          margin-left: 0.3rem;
+          margin-right: 0.3rem;
+      }
+.nav-logo-animated{
+  margin-left: -0.8rem;
+}
+}
