@@ -9,8 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
-  <link rel="stylesheet" href="{% static 'css/home1.css' %}">
-  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'css/home1.css' %}"> -->
+  <!-- <link rel="stylesheet" href="{% static 'css/about.css' %}"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -97,6 +97,342 @@
       }
     }
 
+    
+    /* -----------------------home----------------------- */
+    #home{
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+      }
+      .row{
+        max-width: 100%;
+      }
+      .css-heading {
+          font-size: 2.2rem;
+          font-weight: bolder;
+          font-family: serif;
+          border: 1px solid white;
+          border-radius: 4px;
+          box-shadow: 0 0 3rem purple;
+          margin-top: 6rem;
+          text-align: center;
+          width: 35%;
+          margin-left: 7rem;
+          background: linear-gradient(45deg, hsla(293, 57%, 34%, 0.692) 20%, hsla(263, 61%, 19%, 0.637) 100%);
+        }
+    
+        span .style-blink::after {
+          content: "|";
+          animation: blink 1s infinite;
+        }
+    
+        .text-color {
+          -webkit-text-stroke: 1px rgb(232, 129, 18);
+          -webkit-text-fill-color: rgb(245, 218, 14);
+          text-shadow: 2px 1px 4px rgb(232, 129, 18);
+          /* Optional: Fill text with color */
+        }
+    
+        .my-intro {
+          font-size: 3rem;
+          font-family: serif;
+          font-weight: bolder;
+          margin-left: 7rem;
+          line-height: 1.3em;
+          animation: slideRight 0.4s 0.5s linear forwards;
+        }
+    
+        .my-info {
+          font-size: 1.1rem;
+          font-family: sans-serif;
+          color: #cfc6c6c8;
+          border-left: 1px solid #cfc6c6c8;
+          margin-left: 7rem;
+          padding: 0px 22px;
+          margin-top: -1rem;
+          padding-right: 113px;
+          animation: slideBottom 0.4s 0.5s linear forwards;
+        }
+    
+        /* -----------------------social links--------------------- */
+        .icon-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: self-end;
+          padding-right: 1.7rem;
+          margin-top: -14rem;
+          animation: slideLeft 0.4s 0.5s linear forwards;
+        }
+    
+        .social-links {
+          color: cyan;
+          font-size: 1.9rem;
+          margin: 0.4rem;
+        }
+    
+        .social-links:hover {
+          font-size: 2rem;
+          text-shadow: 0 0 2rem cyan;
+        }
+    
+        /* ---------------------pics---------------------- */
+        .design .circle {
+          aspect-ratio: 1;
+          border-radius: 50%;
+          margin-top: -12rem;
+          margin-left: 20rem;
+          transform: translate(-50%, -50%);
+        }
+    
+        .circle:nth-child(1) {
+          background: linear-gradient(90deg, transparent 50%);
+          width: 35rem;
+        }
+    
+        .circle:nth-child(2) {
+          background-image: url('');
+          background-size: 100%;
+          border: .6rem solid white;
+          width: 24rem;
+          box-shadow: 0 0 1rem white, inset 0 0 1rem white, 0 0 2rem cyan, inset 0 0 2rem cyan, 0 0 3rem blue, inset 0 0 3rem blue;
+        }
+    /* responsiveness for home page */
+  @media only screen and (max-width: 1164px){
+   .css-heading{
+    font-size: 2rem;
+   }
+    .circle:nth-child(2){
+      width: 22rem;
+    }
+  .my-info{
+    padding-right: 69px;
+  }
+  }
+  @media only screen and (max-width: 1078px){
+    .css-heading{
+      width: 39%;
+      margin-left: 5rem;
+    }
+  .my-intro{
+    font-size: 2.6rem;
+    margin-left: 5rem;
+  }
+  .my-info{
+    font-size: 1rem;
+    padding-right: 58px;
+    margin-left: 5rem;
+  }
+  .design .circle{
+    margin-left: 14.5;
+  
+  }
+  .circle:nth-child(2){
+    width: 20rem;
+  }
+  }
+  @media only screen and (max-width: 1026px){
+    .design .circle{
+      margin-left: 16rem;
+    }
+  
+  }
+  @media only screen and (max-width: 940px){
+    .my-info{
+      padding-right: 10px;
+    }
+    .css-heading{
+      width: 41%;
+    }
+    .design .circle{
+      margin-left: 19rem;
+      margin-top: -9rem;
+    }
+    .circle:nth-child(1){
+      width: 29rem;
+    }
+    .icon-item{
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 918px){
+    .css-heading{
+      width: 44%;
+      margin-left: 3rem;
+    }
+    .my-intro{
+      margin-left: 3rem;
+    }
+    .my-info{
+      margin-left: 3rem;
+    }
+    .design .circle{
+      margin-left: 17rem;
+      margin-top: -6rem;
+    }
+    .circle:nth-child(1){
+      width: 21rem;
+    }
+    .circle:nth-child(2){
+      width: 18rem;
+    }
+  }
+  @media only screen and (max-width: 828px){
+    .css-heading{
+      width: 46%;
+    }
+    .my-intro{
+      font-size: 2.2rem;
+  
+    }
+    .my-info{
+      font-size: 0.9rem;
+    }
+  }
+  @media only screen and (max-width: 797px){
+    .css-heading{
+  font-size: 2.6rem;
+  margin-left: 8rem;
+  width: 68%;
+    }
+    .design .circle{
+      display: none;
+    }
+    .my-intro {
+      margin-left: 11rem;
+      font-size: 3.6rem;
+      margin-right: -19rem;
+      text-align: center;
+  }
+  .my-info{
+    margin-left: 9rem;
+    font-size: 1.4rem;
+    margin-right: -23rem;
+    text-align: justify;
+  }
+  }
+  
+  @media only screen and (max-width: 679px){
+    .css-heading{
+      width: 77%;
+          margin-left: 4rem;
+    }
+    .my-intro{
+      margin-left: 6rem;
+    }
+    .my-info{
+      margin-left: 5rem;
+    }
+  }
+  @media only screen and (max-width: 599px){
+    .css-heading{
+      font-size: 2.3rem;
+      width: 80%;
+      margin-left: 3.5rem;
+    }
+    .my-intro{margin-left: 4rem;}
+    .my-info{margin-left: 3rem;}
+  }
+  @media only screen and (max-width: 599px){
+    .css-heading{
+      font-size: 2.3rem;
+      width: 80%;
+      margin-left: 3.5rem;
+    }
+    .my-intro{margin-left: 4rem;}
+    .my-info{margin-left: 3rem;
+    margin-right: -22rem;}
+  }
+  @media only screen and (max-width: 520px){
+    .css-heading{
+      font-size: 1.9rem;
+      width: 77%;
+    }
+    .my-intro {
+          margin-left: 1rem;
+          font-size: 3.2rem;
+          margin-right: -17rem;
+      }
+    .my-info {
+      font-size: 1.2rem;
+          margin-left: 3rem;
+          margin-right: -19rem;
+      }
+  }
+  @media only screen and (max-width: 455px){
+    .css-heading{
+      font-size: 1.7rem;
+    }
+    .my-info{
+      margin-right: -17rem;
+    }
+  }
+  @media only screen and (max-width: 423px){
+    .css-heading{
+      margin-top: 4rem;
+      margin-left: 1.6rem;
+      width: 87%;
+      font-size: 1.7rem;
+    }
+    .my-intro{
+      margin-left: 1.3rem;
+      font-size: 2.8rem;
+      margin-right: -14rem;
+    }
+    .my-info{
+      margin-right: -15rem;
+      font-size: 1rem;
+      margin-left: 2rem;
+  
+    }
+  }
+  @media only screen and (max-width: 366px){
+    .css-heading{
+      font-size: 1.5rem;
+    }
+    .px-4 {
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+  }
+  
+  }
+  @media only screen and (max-width: 341px){
+    .my-intro{
+    margin-left: 1.1rem;
+    font-size: 2.5rem;
+    margin-right: -12rem;
+  
+  }
+  .my-info{
+    margin-left: 1.5rem;
+    margin-right: -13rem;
+    padding: 0px 16px;
+  }
+  }
+  @media only screen and (max-width: 311px){
+    .px-4{
+      padding-right: 0.5rem !important;
+      padding-left: 0.5rem !important;
+    }
+  }
+  @media only screen and (max-width: 292px){
+    .css-heading{
+      margin-top: 3rem;
+          margin-left: 1rem;
+          width: 91%;
+    }
+    .my-intro{
+      font-size: 2rem;
+      margin-right: -11rem;
+      margin-left: 0.1rem;
+  
+    }
+    .my-info{
+      margin-left: 1rem;
+      padding: 0px 11px;
+      padding-right: 7px;
+    }
+  }  
+
 
     /* -----------------------about me----------------- */
     .about-section {
@@ -135,15 +471,138 @@
       font-family: sans-serif;
       color: #cfc6c6c8;
       border-left: 1px solid #cfc6c6c8;
-      margin-left: 7rem;
+      margin-left: 1rem;
       padding-left: 25px;
       margin-top: 6rem;
       text-align: justify;
-      padding-right: 23px;
+      padding-right: 60px;
       margin-bottom: 6rem;
       animation: slideLeft 0.5s 0.5s linear forwards;
     }
     
+    /* responsiveness for about me page */
+    @media only screen and (max-width: 1078px){
+      .about-heading{
+        margin-left: 5rem;
+      }
+      .about-content{
+        margin-left: 1rem;
+        padding-right: 47px;
+      }
+    }
+    @media only screen and (max-width: 978px){
+      .about-heading{
+        font-size: 6rem;
+      }
+      .about-heading:hover{
+        font-size: 6.5rem;
+      }
+      .about-content{
+        padding-right: 17px;
+      }
+    }
+    @media only screen and (max-width: 940px){
+        .about-section .row{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .about-heading{
+          display: flex;
+          margin-top: 2rem;
+          margin-bottom: -3rem;
+        }
+.about-section .col-5{
+  width: fit-content;
+}
+.about-section .row .col-7{
+  width: fit-content;
+}
+.about-content{
+        padding-right: 30px;
+        margin-left: 5rem;
+        border: none;
+  margin-top: 4.5rem;
+}
+    }
+    @media only screen and (max-width: 918px){
+      .about-section{
+        margin-top: -4rem;
+      }
+      .about-heading{
+        margin-left: 3rem;
+      }
+      .about-content{
+        margin-left: 3rem;
+      }
+    }
+    @media only screen and (max-width: 797px){
+      .about-section{
+        margin-top: 2rem;
+      }
+      .about-heading{
+        font-size: 5rem;
+      }
+      .about-heading:hover{
+        font-size: 5.5rem;
+      }
+    }
+    @media only screen and (max-width: 599px){
+      .about-heading{
+        margin-left: 2rem;
+      }
+      .about-content{
+        margin-left: 1rem;
+        padding-right: 7px;
+        font-size: 1.3rem;
+      }
+    }
+    @media only screen and (max-width: 487px){
+      .about-heading{
+        font-size: 4rem;
+        margin-left: 1rem;
+        line-height: 3rem;
+      }
+      .about-heading:hover{
+        font-size: 4.5rem;
+      }
+      .about-content{
+        margin-left: -0.2rem;
+        padding-right: 0px;
+      }
+    }
+    @media only screen and (max-width: 388px){
+      .about-section{
+        margin-top: 1rem;
+      }
+      .about-heading{
+        font-size: 3rem;
+      }
+      .about-heading:hover{
+        font-size: 3.5rem;
+      }
+      .about-content{
+        margin-top: 4rem;
+        font-size: 1.1rem;
+      }
+    }
+    @media only screen and (max-width: 305px){
+      .about-heading{
+        margin-top: 1rem;
+        margin-left: 2rem;
+        line-height: 2rem;
+        font-size: 2.6rem;
+      }
+      .about-heading:hover{
+        font-size: 2.8rem;
+      }
+      .arrow{
+        display: none;
+      }
+      .about-content{
+        font-size: 1rem;
+      }
+    }
 
     /* ----------------------css for skills section--------------- */
     .skills {
@@ -267,12 +726,113 @@
       font-weight: 400;
     }
 
+      /* responsiveness for skills section */
+@media only screen and (max-width: 1078px){
+  .Technical-bars{margin: 0px 0.7rem 2rem 5rem;}
+  .professional-bars{margin: 0px 2.3rem 2rem 2rem;}
+}
+@media only screen and (max-width: 918px) {
+  .Technical-bars{margin: 0px -0.3rem 2rem 3rem;}
+  .professional-bars{margin: 0px 1rem 2rem 1rem;}
+}
+@media only screen and (max-width: 790px){
+  .skill-main-text h2{
+    font-size: 4.4rem;
+  }
+  .skill-main-text h2 span{
+    font-size: 4.4rem;
+  }
+  .Technical-bars {
+        margin: 0px -0.9rem 2rem 2rem;
+    }
+    .professional-bars {
+        margin: 0px 0rem 2rem 0.5rem;
+    }
+    .heading1{font-size: 1.8rem;}
+}
+@media only screen and (max-width: 710px) {
+      .skills .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .Technical-bars{
+        margin: 0px -8.9rem 2rem -7rem;
+      }
+      .professional-bars{
+        margin: 0px -8.9rem 2rem -7rem;
+      }
+    }
+    @media only screen and (max-width: 523px){
+      .skill-right .heading1{
+        margin-top: 0.3rem;
+        width: max-content;
+       
+      }
+      .Technical-bars{
+        margin: 0px -6.9rem 2rem -6rem;
+      }
+      .professional-bars{
+        margin: 0px -6.9rem 2rem -6rem;
+      }
+    }
+    @media only screen and (max-width: 438px){
+      .skill-left .heading1{
+        width: max-content;
+      }
+      .heading1{font-size: 1.5rem;}
+      .skill-main-text span{
+        font-size: 1.1rem;
+      }
+      .skill-main-text h2{
+        font-size: 3.9rem;
+      }
+      .skill-main-text h2 span{
+        font-size: 3.9rem;
+        letter-spacing: 1px;
+      }
+      .Technical-bars{margin: 0px -5.3rem 2rem -3.6rem;}
+      .professional-bars{margin: 0px -5.3rem 2rem -3.6rem;}
+    }
+    @media only screen and (max-width: 352px){
+      .skill-main-text span{
+        font-size: 1rem;
+      }
+      .skill-main-text h2{
+        font-size: 3rem;
+      }
+      .skill-main-text h2 span{
+        font-size: 3rem;
+        letter-spacing: 1px;
+      }
+    }
+    @media only screen and (max-width: 292px){
+      .skill-main-text span{
+        font-size: 0.9rem;
+      }
+      .skill-main-text h2{
+        font-size: 2.7rem;
+      }
+      .skill-main-text h2 span{
+        font-size: 2.7rem;
+        letter-spacing: 0.5px;
+      }
+      .heading1{
+        margin-left: -1rem;
+      }
+      .skill-right .heading1{
+        margin-left: -2rem;
+      }
+      .Technical-bars{margin: 0px -4.8rem 2rem -3.1rem;}
+      .professional-bars{margin: 0px -4.8rem 2rem -3.1rem;}
+    }
     /* ------------------projects------------------------- */
     .projects {
       background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.295));
       height: auto;
       padding-top: 1rem;
-      padding-bottom: 5rem;
+      padding-bottom: 3.5rem;
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0), inset 0 0 1rem rgba(0, 0, 0, 0);
     }
 
@@ -378,6 +938,40 @@
       height: 100%;
     }
 
+    /* responsiveness for projects page */
+
+    @media only screen and (max-width: 490px){
+      .projects .projects-main-text h2{
+        font-size: 4rem;
+        letter-spacing: 2px;
+      }
+      .projects-main-text span{
+        font-size: 1.2rem;
+      }
+      .swiper{
+        padding-top: 13px;
+      }
+    }
+    @media only screen and (max-width: 378px){
+      .projects .projects-main-text h2{
+        font-size: 3.5rem;
+        letter-spacing: 1px;
+      }
+      .projects-main-text span{
+        font-size: 1rem;
+      }
+    }
+    @media only screen and (max-width: 346px){
+      .swiper{
+        width: 95%;
+        padding-top: 7px;
+      }
+      .projects .projects-main-text h2{
+        font-size: 3rem;
+        letter-spacing: 1px;
+      }
+    }
+
     /* -----------------------contact------------------- */
     .contact {
       background: rgba(0, 0, 0, 0.568);
@@ -393,7 +987,6 @@
       flex-direction: column;
       align-items: center;
       padding-top: .2rem;
-
       padding-bottom: 2rem;
     }
 
@@ -475,6 +1068,8 @@
       margin-top: 1rem;
       margin-left: 9rem;
       border-radius: 12px;
+      display: flex;
+      justify-content: center;
     }
 
     .css-form .btn::after {
@@ -487,6 +1082,7 @@
       left: 0;
       top: 0;
       border-radius: 10px;
+      
     }
 
     .css-form .btn::before {
@@ -534,13 +1130,45 @@
       font-weight: bold;
     }
 
-    /* .css-form .btn:active::after{
-      background-color: #333;
+    /* responsiveness for contact form */
+/* @media only screen and (max-width: 1226px){
+  .contact .form-wrapper{
+    margin: 0 19rem;
+  }
+}
+@media only screen and (max-width: 1170px){
+  .css-form .btn{
+    margin-left: 7rem;
+  }
+}
+@media only screen and (max-width: 1126px){
+  .contact .form-wrapper{
+    margin: 0 16rem;
+  }
+  .css-form .btn{
+    margin-left: 8rem;
+  }
+}
+@media only screen and (max-width: 1060px){
+  .contact-main-text span{
+    margin: 0px 7rem;
+  }
+  .contact .form-wrapper{
+    margin: 0 13rem;
+  }
+}
+@media only screen and (max-width: 954px){
+  .contact .form-wrapper{
+    margin: 0 10rem;
+  }
+  .css-form .btn {
+        margin-left: 11rem;
     }
-    .css-form .btn:active{
-      color: #f7f7f7;
-      font-weight: bold;
-    } */
+} */
+
+
+
+/* --------------------footer----------------------- */
     .footer {
       background: rgba(0, 0, 0, 0.747);
       height: auto;
@@ -644,7 +1272,7 @@
     <!-- --------------About me----------- -->
     <section class="about-section" id="about-me">
       <div class="row">
-        <div class="col-4">
+        <div class="col-5">
           <div class="about-heading">About me <span class="arrow"><i class="bi bi-arrow-right fw-bolder"></i></span>
           </div>
         </div>
@@ -663,7 +1291,7 @@
     </section>
 
     <!-- --------------------My Skills--------------------- -->
-    <!-- <section class="skills pb-5" id="my-skills">
+    <section class="skills pb-5" id="my-skills">
       <div class="skill-main-text">
         <span>Technical and Professional</span>
         <h2>My <span>Skills</span> </h2>
@@ -782,10 +1410,10 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- --------------------------Projects--------------------- -->
-    <!-- <section class="projects" id="my-projects">
+    <section class="projects" id="my-projects">
       <div class="projects-main-text">
         <span>What I will do for you </span>
         <h2 class="text-center pt-1 pb-3">My Projects</h2>
@@ -843,10 +1471,10 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-    </section> -->
+    </section>
 
     <!-- ------------------------contact form ------------------------- -->
-    <!-- <section class="contact" id="contact-me">
+    <section class="contact" id="contact-me">
       <div class="contact-main-text">
         <span>👉 Let’s build something amazing together! Feel free to Contact Me to discuss amazing projects....</span>
         <h2 class="text-center pt-1 pb-3">Contact Me</h2>
@@ -878,7 +1506,7 @@
       
     </section>
   </main>
-  -->
+ 
 
     <!-- ------------------------footer------------------------------------ -->
     <!-- <footer class="footer d-flex">
@@ -939,3 +1567,8 @@
 </body>
 
 </html>
+
+
+
+
+
