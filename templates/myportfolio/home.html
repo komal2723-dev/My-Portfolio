@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
-  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home1.css' %}">
   <link rel="stylesheet" href="{% static 'css/about.css' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -97,9 +97,54 @@
       }
     }
 
-   
+
     /* -----------------------about me----------------- */
-   
+    .about-section {
+      background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.295));
+      margin-top: -7rem;
+      height: auto;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0);
+    }
+
+    .about-heading {
+      transition: all ease-in-out 0.3s;
+      color: white;
+      font-size: 6.5rem;
+      font-family: serif;
+      font-weight: bolder;
+      margin-top: 9rem;
+      margin-bottom: 4rem;
+      line-height: 5rem;
+      margin-left: 7rem;
+    }
+
+    .about-heading:hover {
+      font-size: 7rem;
+      transform: scale(1.2);
+    }
+
+    .arrow {
+      color: #d749fa;
+      margin-left: 1rem;
+      transition: all ease-in-out 0.3s;
+
+    }
+
+    .about-content {
+      font-size: 1.4rem;
+      font-family: sans-serif;
+      color: #cfc6c6c8;
+      border-left: 1px solid #cfc6c6c8;
+      margin-left: 7rem;
+      padding-left: 25px;
+      margin-top: 6rem;
+      text-align: justify;
+      padding-right: 23px;
+      margin-bottom: 6rem;
+      animation: slideLeft 0.5s 0.5s linear forwards;
+    }
+    
+
     /* ----------------------css for skills section--------------- */
     .skills {
       background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0.295));
@@ -561,7 +606,7 @@
   </header>
 
   <!-- -----------------main----------------------  -->
-  <main> 
+  <main>
     <!-- ------------home------- -->
     <section id="home">
       <h1 class="text-white css-heading px-4 py-3"><span id="typewritter-wrapper" class="style-blink"></span></h1>
@@ -597,9 +642,9 @@
     </section>
 
     <!-- --------------About me----------- -->
-    <!-- <section class="about-section" id="about-me">
-    <div class="row">
-      <div class="col-4">
+    <section class="about-section" id="about-me">
+      <div class="row">
+        <div class="col-4">
           <div class="about-heading">About me <span class="arrow"><i class="bi bi-arrow-right fw-bolder"></i></span>
           </div>
         </div>
@@ -615,7 +660,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- --------------------My Skills--------------------- -->
     <!-- <section class="skills pb-5" id="my-skills">
@@ -835,8 +880,8 @@
   </main>
   -->
 
-  <!-- ------------------------footer------------------------------------ -->
-  <!-- <footer class="footer d-flex">
+    <!-- ------------------------footer------------------------------------ -->
+    <!-- <footer class="footer d-flex">
     <div class="col ms-5 fs-5 ps-3">
       <a href="https://www.instagram.com/vawzen_storm_.7/" target="_blank" class="pe-4 text-info"><i
           class="bi bi-instagram"></i></a>
@@ -853,44 +898,44 @@
 
  -->
 
-  <!-- -------------js------------ -->
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      loop: true,
-      slidesPerView: "auto",
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      autoplay: {
+    <!-- -------------js------------ -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        autoplay: {
 
-        delay: 2500,
-        disableOnInteraction: false,
-      }
-    });
-    var typed = new Typed("#typewritter-wrapper", {
-      strings: ["Welcome to my Profile","Let's start"],
-      typeSpeed: 100,
-      backSpeed: 100,
-      BackDelay: 1000,
-      loop: true
-    });
+          delay: 2500,
+          disableOnInteraction: false,
+        }
+      });
+      var typed = new Typed("#typewritter-wrapper", {
+        strings: ["Welcome to my Profile", "Let's start"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        BackDelay: 1000,
+        loop: true
+      });
 
 
-  </script>
+    </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
