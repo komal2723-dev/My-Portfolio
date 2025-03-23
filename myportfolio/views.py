@@ -5,6 +5,7 @@ from django.conf import settings
 from django.contrib import messages
 import os
 from django.http import FileResponse, Http404
+from django.conf import settings
 # Create your views here.
 def home(request):
 	if request.method == 'POST':
@@ -28,4 +29,9 @@ def home(request):
 	else:
 		form = ContactForm()
 	return render(request,'myportfolio/home.html',{'form':form})
+
+
+def open_pdf(request):
+    pdf_path = os.path.join(settings.MEDIA_ROOT, 'resume.pdf')  # Change to your PDF filename
+    return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
 
