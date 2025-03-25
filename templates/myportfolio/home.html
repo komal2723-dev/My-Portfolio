@@ -190,7 +190,7 @@ padding: 3px;
     /* -----------------------home----------------------- */
     #home{
         margin-top: -1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 9rem;
       }
       .row{
         max-width: 100%;
@@ -248,8 +248,9 @@ padding: 3px;
           flex-direction: column;
           justify-content: center;
           align-items: self-end;
+          position: absolute;
           padding-right: 1.7rem;
-          margin-top: -14rem;
+          /* margin-top: -14rem; */
           animation: slideLeft 0.4s 0.5s linear forwards;
         }
     
@@ -267,9 +268,10 @@ padding: 3px;
         /* ---------------------pics---------------------- */
         .design .circle {
           aspect-ratio: 1;
+          position: absolute;
+          top: 25rem; 
+          left: 56rem;
           border-radius: 50%;
-          margin-top: -12rem;
-          margin-left: 20rem;
           transform: translate(-50%, -50%);
         }
     
@@ -286,6 +288,17 @@ padding: 3px;
           box-shadow: 0 0 1rem white, inset 0 0 1rem white, 0 0 2rem cyan, inset 0 0 2rem cyan, 0 0 3rem blue, inset 0 0 3rem blue;
         }
     /* responsiveness for home page */
+    @media only screen and (max-width: 1230px){
+      .design .circle {
+        left: 51rem;
+      }
+      .circle:nth-child(2){
+        width: 23rem;
+      }
+      .my-info{
+    padding-right: 69px;
+  }
+    }
   @media only screen and (max-width: 1164px){
    .css-heading{
     font-size: 2rem;
@@ -293,9 +306,13 @@ padding: 3px;
     .circle:nth-child(2){
       width: 22rem;
     }
-  .my-info{
-    padding-right: 69px;
+
   }
+  @media only screen and (max-width: 1102px){
+    .design .circle {
+        left: 46rem;
+    }
+    
   }
   @media only screen and (max-width: 1078px){
     .css-heading{
@@ -311,30 +328,27 @@ padding: 3px;
     padding-right: 58px;
     margin-left: 5rem;
   }
-  .design .circle{
-    margin-left: 14.5;
-  
-  }
   .circle:nth-child(2){
     width: 20rem;
   }
   }
   @media only screen and (max-width: 1026px){
     .design .circle{
-      margin-left: 16rem;
+      left: 42rem;
     }
   
   }
-  @media only screen and (max-width: 940px){
+  @media only screen and (max-width: 978px){
     .my-info{
       padding-right: 10px;
     }
+  }
+  @media only screen and (max-width: 950px){
     .css-heading{
       width: 41%;
     }
     .design .circle{
-      margin-left: 19rem;
-      margin-top: -9rem;
+      left: 44rem;
     }
     .circle:nth-child(1){
       width: 29rem;
@@ -343,7 +357,7 @@ padding: 3px;
       display: none;
     }
   }
-  @media only screen and (max-width: 918px){
+  @media only screen and (max-width: 934px){
     .css-heading{
       width: 44%;
       margin-left: 3rem;
@@ -355,14 +369,17 @@ padding: 3px;
       margin-left: 3rem;
     }
     .design .circle{
-      margin-left: 17rem;
-      margin-top: -6rem;
     }
     .circle:nth-child(1){
       width: 21rem;
     }
     .circle:nth-child(2){
       width: 18rem;
+    }
+  }
+  @media only screen and (max-width: 884px){
+    .design .circle {
+        left: 40rem;
     }
   }
   @media only screen and (max-width: 828px){
@@ -375,6 +392,9 @@ padding: 3px;
     }
     .my-info{
       font-size: 0.9rem;
+    }
+    .design .circle{
+      left: 36rem;
     }
   }
   @media only screen and (max-width: 797px){
@@ -1378,7 +1398,7 @@ margin: 0 10rem;
               <a class="nav-link active text-light" aria-current="page" href="#my-projects">Projects</a>
             </li>
             <li class="nav-item px-2 py-1">
-              <a class="nav-link active text-light" aria-current="page" href="{% url 'open_pdf' %}">Resume</a>
+              <a class="nav-link active text-light" aria-current="page" href="https://drive.google.com/file/d/1D9tdMBls_kNjqXSga0SEqvKon2Ikp1gm/view?usp=sharing" target="_blank">Resume</a>
             </li>
           </ul>
           <a class="nav-link" aria-current="page" href="#contact-me"><button class="btn css-btn" type="button">Contact me</button></a>
