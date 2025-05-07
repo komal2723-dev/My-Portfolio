@@ -1011,7 +1011,7 @@ padding: 3px;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      padding: 0 40px;
+      padding: 0 10px;
       text-align: center;
       font-size: 14px;
       transition: height 0.5s;
@@ -1020,7 +1020,7 @@ padding: 3px;
     .overlay h3 {
       font-weight: 500;
       margin-bottom: 5px;
-      margin-top: 80%;
+      margin-top: 40%;
       font-family: bebas neue;
       font-size: 30px;
       letter-spacing: 2px;
@@ -1594,54 +1594,16 @@ margin: 0 10rem;
       </div>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
+          {% for project in projects %}
           <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            <img src="{{ project.image.url }}" alt="{{project.title}}"> 
             <div class="overlay">
-              <h3>....</h3>
-              <p>..........................</p>
-              <a href=""><i class='bx bx-link-external'></i></a>
+              <h3>{{project.title}}</h3>
+              <p>{{project.description}}</p>
+              <a href="{{project.website_link}}" target="_blank"><i class='bx bx-link-external'></i></a>
             </div>
           </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            <div class="overlay">
-              <h3>....</h3>
-              <p>..........................</p>
-              <a href=""><i class='bx bx-link-external'></i></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            <div class="overlay">
-              <h3>....</h3>
-              <p>..........................</p>
-              <a href=""><i class='bx bx-link-external'></i></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            <div class="overlay">
-              <h3>....</h3>
-              <p>..........................</p>
-              <a href=""><i class='bx bx-link-external'></i></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            <div class="overlay">
-              <h3>....</h3>
-              <p>..........................</p>
-              <a href=""><i class='bx bx-link-external'></i></a>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-            <div class="overlay">
-              <h3>....</h3>
-              <p>..........................</p>
-              <a href=""><i class='bx bx-link-external'></i></a>
-            </div>
-          </div>
+          {% endfor %}
         </div>
         <div class="swiper-pagination"></div>
       </div>

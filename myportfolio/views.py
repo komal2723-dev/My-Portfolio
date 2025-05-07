@@ -3,16 +3,11 @@ from . forms import ContactForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
-import os
-from django.http import FileResponse, Http404, HttpResponse
 from django.conf import settings
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import Flow
-from googleapiclient.discovery import build
-from google.auth.transport.requests import Request
-from google.auth.exceptions import RefreshError
+from . models import Project
 # Create your views here.
 def home(request):
+	projects = Project.objects.all()
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 		if form.is_valid():
@@ -33,6 +28,5 @@ def home(request):
 			return redirect('home')
 	else:
 		form = ContactForm()
-	return render(request,'myportfolio/home.html',{'form':form})
-
+	return render(request,'myportfolio/home.html',{'form':form, 'projects':projects})
 
